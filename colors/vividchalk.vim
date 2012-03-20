@@ -1,0 +1,1 @@
+/home/e-max/.vim/bundle/vividchalk/colors/vividchalk.vim
