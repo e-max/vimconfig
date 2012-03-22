@@ -1,0 +1,56 @@
+snippet il
+	import logging
+
+snippet gl
+	logger = logging.getLogger("${1:logger}")
+
+snippet ld
+	logger.debug(u"${1:log}")
+
+snippet li
+	logger.info(u"${1:log}")
+
+snippet lw
+	logger.warning(u"${1:log}")
+
+snippet le
+	logger.error(u"${1:log}")
+
+snippet lex
+	logger.exception(u"${1:log}")
+
+
+
+snippet ered
+	"\x1B[31;1m ${1:text}\x1B[0m"
+snippet egreen
+	"\x1B[32;1m ${1:text}\x1B[0m"
+snippet eblue
+	"\x1B[33;1m ${1:text}\x1B[0m"
+snippet emagenta
+	"\x1B[34;1m ${1:text}\x1B[0m"
+snippet ecyan
+	"\x1B[35;1m ${1:text}\x1B[0m"
+snippet ewhite
+	"\x1B[36;1m ${1:text}\x1B[0m"
+
+
+snippet pred
+	print "\x1B[31;1m ${1:text}\x1B[0m"${2:,text}
+snippet pgreen
+	print "\x1B[32;1m ${1:text}\x1B[0m", ${2:text}
+snippet pblue
+	print "\x1B[33;1m ${1:text}\x1B[0m", ${2:text}
+snippet pmagenta
+	print "\x1B[34;1m ${1:text}\x1B[0m", ${2:text}
+snippet pcyan
+	print "\x1B[35;1m ${1:text}\x1B[0m", ${2:text}
+snippet pwhite
+	print "\x1B[36;1m ${1:text}\x1B[0m", ${2:text}
+
+
+
+snippet idf
+	from twisted.internet import defer
+snippet idfr
+	from twisted.internet import defer, reactor
