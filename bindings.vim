@@ -1,6 +1,4 @@
 
-imap ;; <ESC>
-imap ii <ESC>
 map ; :
 
 imap , , 
