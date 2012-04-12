@@ -27,6 +27,7 @@ call vam#ActivateAddons([
 			\"tracwiki",
 			\"vividchalk",
 			\"KeyboardLayoutSwitcher",
+			\"ZoomWin",
 			\])
 
 
