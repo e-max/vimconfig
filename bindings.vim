@@ -1,8 +1,6 @@
 
 map ; :
 
-imap , , 
-
 nmap <Leader>a :Ack <C-R><C-W>
 
 nmap <Leader>g :vim <C-R><C-W> **
