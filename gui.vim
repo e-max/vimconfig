@@ -21,4 +21,4 @@ set wildmenu
 "highlight Folded guibg=black guifg=lightblue
 
 "Какая-то фигня в minibuff explorer :)
-:highlight link MBENormal Normal
+":highlight link MBENormal Normal
