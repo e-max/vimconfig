@@ -28,6 +28,7 @@ call vam#ActivateAddons([
 			\"vividchalk",
 			\"KeyboardLayoutSwitcher",
 			\"ZoomWin",
+			\"IndexedSearch",
 			\])
 
 
