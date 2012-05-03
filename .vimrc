@@ -29,6 +29,7 @@ call vam#ActivateAddons([
 			\"KeyboardLayoutSwitcher",
 			\"ZoomWin",
 			\"IndexedSearch",
+			\"jellybeans",
 			\])
 
 
