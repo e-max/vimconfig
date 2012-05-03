@@ -30,6 +30,7 @@ call vam#ActivateAddons([
 			\"ZoomWin",
 			\"IndexedSearch",
 			\"jellybeans",
+			\"Powerline",
 			\])
 
 
