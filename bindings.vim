@@ -40,11 +40,6 @@ vmap <F9> <ESC>:make<CR>
 cmap w!! w !sudo tee % >/dev/null
 
 
-" закрыть буфер
-" Функция Kwbd определена ниже в этом файле
-imap <S-F4> <Esc>:call Kwbd(1)<CR>
-nmap <S-F4> :call Kwbd(1)<CR>
-
 
 
 " по Ctrl-Enter вставляем пустую строку в Mormal Mode
