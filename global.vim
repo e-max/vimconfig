@@ -42,5 +42,7 @@ set hlsearch      " highlight search terms
 set incsearch     " show search matches as you type
 set gdefault        " автоматически добавляет /g  к каждой строке замены (то есть замены происходят по всей строке)
 
+set splitright    " vsplit будет открывать окно справа
+
 
 command -bar -nargs=1 OpenURL :!firefox <args>
