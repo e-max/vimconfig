@@ -19,18 +19,14 @@ map <C-c>o :call RopeOrganizeImports()<CR>
 iabbr pydev from pydev.pydevd import settrace; settrace() 
 
 
-iabbr @p @param:<ESC>i
-iabbr @r @return:<ESC>A
-iabbr @t @type: C{}<ESC>hhhhi
-iabbr @y @rtype: C{}<ESC>hhhi
 iabbr #u # -*- coding: utf-8 -*-
-
-
 iabbr sf self.fail()<ESC>i
 iabbr sfi self.failIf()<ESC>i
 iabbr sfu self.failUnless()<ESC>i
 iabbr sfue self.failUnlessEqual()<ESC>i
 iabbr sfie self.failIfEqual()<ESC>i
 
-cabbrev ** **/*.py
+
+let g:pymode_breakpoint = 0
+let g:pymode_folding = 0
 
