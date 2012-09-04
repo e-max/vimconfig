@@ -2,7 +2,6 @@ filetype off
 
 source ~/.vim/global.vim
 source ~/.vim/bindings.vim
-source ~/.vim/gui.vim
 source ~/.vim/plugins.vim
 source ~/.vim/vim-addon-manager.vim
 
@@ -17,7 +16,6 @@ call vam#ActivateAddons([
 			\"lodgeit",
 			\"matchit.zip",
 			\"pyflakes%2441",
-			\"python%30",
 			\"repeat",
 			\"snipmate-snippets",
 			\"snipmate",
@@ -31,8 +29,12 @@ call vam#ActivateAddons([
 			\"IndexedSearch",
 			\"jellybeans",
 			\"Powerline",
+            \"The_NERD_Commenter",
+            \"Tagbar",
+            \"ragtag",
 			\])
 
 
+source ~/.vim/gui.vim
 
 
