@@ -46,3 +46,6 @@ set splitright    " vsplit будет открывать окно справа
 
 
 command -bar -nargs=1 OpenURL :!firefox <args>
+
+
+set path=.,,**
