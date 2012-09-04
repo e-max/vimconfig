@@ -1,7 +1,7 @@
 "set guifont=Andale\ Mono\ 12
 "set guifont=Consolas\ 11                                                                                                                    
 set guifont=Terminus\ 12                                                                                                                    
-set guioptions=aegimrLt   
+set guioptions=aegirLt   
 
 
 "colorscheme vibrantink
