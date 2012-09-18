@@ -12,7 +12,7 @@ snippet cls
 			self.$4 = $4
 
 		def __repr__(self):
-			return u"$1(${6})" ${7:%()}
+			return u"%s(${6})" % (self.__class__.__name__, ${7:%()}
 
 		${8}
 
