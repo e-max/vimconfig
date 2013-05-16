@@ -5,6 +5,9 @@ source ~/.vim/bindings.vim
 source ~/.vim/plugins.vim
 source ~/.vim/vim-addon-manager.vim
 
+
+
+
 call vam#ActivateAddons([
 			\"ack",
 			\"align",
@@ -17,9 +20,8 @@ call vam#ActivateAddons([
 			\"matchit.zip",
 			\"pyflakes%2441",
 			\"repeat",
-			\"snipmate-snippets",
-			\"snipmate",
-			\"SuperTab_continued.",
+            \"UltiSnips",
+			\"SuperTab%1643",
 			\"The_NERD_tree",
 			\"surround",
 			\"tracwiki",
@@ -32,9 +34,16 @@ call vam#ActivateAddons([
             \"The_NERD_Commenter",
             \"Tagbar",
             \"ragtag",
-			\])
+            \ 'github:tpope/vim-eunuch',
+            \ 'github:nvie/vim-rst-tables',
+            \ 'github:gregsexton/gitv',
+            \ "Syntastic",
+			\ "vimproc",
+			\ "github:stargrave/IviCC",
+			\ "github:bitc/vim-hdevtools",
+			\],{'auto_install' : 0})
+
+
 
 
 source ~/.vim/gui.vim
-
-
