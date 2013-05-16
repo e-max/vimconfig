@@ -47,8 +47,7 @@ vmap <F9> <ESC>:make<CR>
 
 cmap w!! w !sudo tee % >/dev/null
 
-
-
+command! -range JSON <line1>,<line2>!python -m json.tool
 
 " по Ctrl-Enter вставляем пустую строку в Mormal Mode
 map <C-CR> o<ESC>
