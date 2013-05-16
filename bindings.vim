@@ -32,6 +32,14 @@ imap <S-F3> <ESC>:cp<CR>
 nmap <S-F3> :cp<CR>
 vmap <S-F3> <ESC>:cp<CR>
 
+imap <F4> <ESC>:lne<CR>
+nmap <F4> :lne<CR>
+vmap <F4> <ESC>:lne<CR>
+
+imap <S-F4> <ESC>:lp<CR>
+nmap <S-F4> :lp<CR>
+vmap <S-F4> <ESC>:lp<CR>
+
 imap <F9> <ESC>:make<CR> 
 nmap <F9> :make<CR>
 vmap <F9> <ESC>:make<CR>
