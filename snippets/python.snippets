@@ -16,6 +16,12 @@ snippet cls
 
 		${8}
 
+snippet \
+	lambda ${1:arg}: ${2:}
+
+snippet pudb
+	import pudb; pudb.set_trace()
+
 snippet il
 	import logging
 
@@ -36,7 +42,11 @@ snippet le
 
 snippet lex
 	logger.exception(u"${1:log}")
-
+#сниппеты твистеда
+snippet idf
+	from twisted.internet import defer
+snippet idfr
+	from twisted.internet import defer, reactor
 #сниппеты для написания документации
 snippet :p
 	:param ${1:name}: ${2:description}
@@ -47,8 +57,7 @@ snippet :r
 snippet :rt
 	:rtype ${1:description}
 
-
-
+#сниппеты цветов
 snippet ered
 	"\x1B[31;1m ${1:text}\x1B[0m"
 snippet egreen
@@ -82,7 +91,4 @@ snippet pwhite
 
 
 
-snippet idf
-	from twisted.internet import defer
-snippet idfr
-	from twisted.internet import defer, reactor
+
