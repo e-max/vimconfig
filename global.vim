@@ -1,6 +1,7 @@
 
 " Приравниваем регистр "" регистру "*
 " set clipboard=unnamed
+set encoding=utf-8
 
 set nocompatible          " We're running Vim, not Vi!
 set hidden
@@ -48,5 +49,6 @@ set splitright    " vsplit будет открывать окно справа
 command -bar -nargs=1 OpenURL :!firefox <args>
 
 set completeopt=menu
+set complete-=1
 
 set path=.,,**

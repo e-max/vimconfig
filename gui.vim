@@ -5,7 +5,9 @@ set guioptions=aegirLt
 
 
 "colorscheme vibrantink
-colorscheme blue
+"colorscheme blue
+let g:jellybeans_use_term_background_color = 1
+colorscheme jellybeans
 
 set title                " change the terminal's title
 set visualbell           " don't beep
