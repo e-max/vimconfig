@@ -1,0 +1,83 @@
+#URxvt.perl-ext-common: default,tabbedex,matcher
+URxvt.perl-ext-common: default,matcher
+
+#urxvt*inheritPixmap:    false
+#urxvt*fading:           20
+#urxvt*fadeColor:        black
+#urxvt*tintColor:        #EFEFEF
+
+
+urxvt.scrollBar_right: true
+urxvt.scrollstyle: plain
+
+urxvt*foreground:       #B2B2B2
+urxvt*background:       black
+urxvt*internalBorder:   0
+
+
+#urxvt.font: xft:Monospace:size=12:antialias=true
+#urxvt.boldfont: xft:Monospace:bold:size=12
+
+urxvt.font: xft:Monospace:size=12:antialias=true
+
+#urxvt.font: -*-terminus-medium-*-*-*-*-100-*-*-*-*-iso8859-15
+
+
+URxvt*letterSpace: -1
+
+
+URxvt.urlLauncher:        firefox
+URxvt.keysym.C-Delete:    perl:matcher
+URxvt.matcher.button:     1
+URxvt.matcher.pattern.1:  \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
+
+
+URxvt.matcher.pattern.2:  \\B(/\\S+?):(\\d+)(?=:|$)
+URxvt.matcher.launcher.2: gvim $1 +$2
+
+URxvt.matcher.pattern.3:  \\B"(/\\S+?)",\\sline\\s(\\d+)(?=,|$)
+URxvt.matcher.launcher.3: gvim $1 +$2
+
+#URxvt.matcher.pattern.2:  \\B(/\\S+?):(\\d+)(?=:|$)
+#URxvt.matcher.launcher.2: gvim1 --remote-send ":e $1<CR> $2gg"
+
+#URxvt.matcher.pattern.3:  \\B"(/\\S+?)",\\sline\\s(\\d+)(?=,|$)
+#URxvt.matcher.launcher.3: gvim --remote-send ":e $1<CR> $2gg"
+
+URxvt.matcher.pattern.4:  \\#(\\d+)
+URxvt.matcher.launcher.4: firefox https://redmine.ivi.ru/issues/$1
+
+
+#URxvt.searchable-scrollback: C-s-f
+
+URxvt.color0:   #000000
+URxvt.color1:   #B21818
+URxvt.color2:   #18B218
+URxvt.color3:   #B26818
+URxvt.color4: #268bd2
+URxvt.color5:   #B218B2
+URxvt.color6:   #18B2B2
+URxvt.color7:   #B2B2B2
+
+URxvt.color8:   #686868
+URxvt.color9:   #FF5454
+URxvt.color10:  #54FF54
+URxvt.color11:  #FFFF54
+URxvt.color12: #839496
+URxvt.color13:  #FF54FF
+URxvt.color14:  #54FFFF
+URxvt.color15:  #FFFFFF
+
+URxvt.keysym.M-c: command:\033c
+
+URxvt*keysym.C-Tab: \033{
+URxvt*iso14755: False
+URxvt*iso14755_52: False
+
+#URxvt.keysym.M-g: \033<S-Down>
+
+URxvt.saveLines:        8192
+
+URxvt*scrollTtyOutput:      false
+URxvt*scrollWithBuffer:     true
+URxvt*scrollTtyKeypress:    true
