@@ -1,0 +1,94 @@
+snippet info
+-- |
+-- Module      :  ${1:Module.Namespace}
+-- Copyright   :  ${2:Author} ${3:2011-2012}
+-- License     :  ${4:BSD3}
+--
+-- Maintainer  :  ${5:email@something.com}
+-- Stability   :  ${6:experimental}
+-- Portability :  ${7:unknown}
+--
+-- ${8:Description}
+--
+endsnippet
+
+snippet imp
+import  ${1:Data.Text}
+endsnippet
+
+snippet imp
+import  ${1:Data.Text} (${2:head})
+endsnippet
+
+
+snippet inst
+instance ${1:Monoid} ${2:Type} where
+    ${3}
+endsnippet
+
+snippet type
+type ${1:Type} = ${2:Type}
+endsnippet
+
+
+snippet newtype
+newtype ${1:Type} = ${2:$1} ${3:Int}
+endsnippet
+
+snippet class
+class ${1:Class} a where
+    ${2}
+endsnippet
+
+
+snippet const
+${1:name} :: ${2:a}
+$1 = ${3:undefined}
+endsnippet
+
+snippet fn
+${1:fn} :: ${2:Type} -> ${3:Type}
+$1 ${4} = ${5:undefined}
+endsnippet
+
+snippet fn2
+${1:fn} :: ${2:Type} -> ${3:Type} -> ${4:Type}
+$1 ${5} = ${6:undefined}
+endsnippet
+
+snippet map
+${1:map} ${2:fn} ${3:list}
+endsnippet
+
+snippet <-
+${1:a} <- ${2:m a}
+endsnippet
+
+snippet ->
+${1:m a} -> ${2:a}
+endsnippet
+
+snippet tup
+(${1:a}, ${2:b})
+endsnippet
+
+snippet tup2
+(${1:a}, ${2:b}, ${3:c})
+endsnippet
+
+snippet tup3
+(${1:a}, ${2:b}, ${3:c}, ${4:d})
+endsnippet
+
+
+snippet recf
+, ${1:recField} :: ${2:undefined}
+endsnippet
+
+snippet where
+where
+    ${1:fn} = ${2:undefined}
+endsnippet
+
+
+

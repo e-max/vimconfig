@@ -1,0 +1,200 @@
+
+
+snippet errp "Error return pair" !b
+if err != nil {
+	return nil, err
+}
+${0}
+endsnippet
+
+snippet gl "logging.MustGetLogger" !b
+var logger = logging.MustGetLogger(${0})
+endsnippet
+
+snippet le "logger.Error" !b
+logger.Error(${0})
+endsnippet
+
+snippet li "logger.Info" !b
+logger.Info(${0})
+endsnippet
+
+snippet ld "logger.Debug" !b
+logger.Debug(${0})
+endsnippet
+
+snippet lw "logger.Warn" !b
+logger.Warn(${0})
+endsnippet
+
+snippet ln "logger.Notice" !b
+logger.Notice(${0})
+endsnippet
+
+snippet lf "logger.Debug variable"
+logger.Debug("${1} = %+v\n", $1)
+endsnippet
+
+
+
+snippet bp "godebug breakpoint"
+_ = "breakpoint"
+endsnippet
+
+
+snippet goplay "template for go playground" !b
+
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Println("Hello, playground")
+}
+
+endsnippet
+
+snippet help "help field"
+\`help:"${1:displayName}"\`
+endsnippet
+
+
+#сниппеты цветов
+#
+# Как они вообще работают
+# Есть простая 16 цветная палитра , и есть 256 цветная
+# для 16 цветной
+# \x1B[31;1m ${1:text}\x1B[0m
+# здесь 31 означает цвет ( они могут быть от 30 до 37 )
+# а 1 - доп параметр. Например 1 - означает bold . Еще там могут быть всякие мигания и проч ерунда
+#
+# для 256 палитры
+# \x1B[38;5;12;1m text %s \x1B[0m
+# 38;5  - означают 256 цветную палитру
+# 12 - цвет  ( могут быть от 1 до 256)
+# 1 - доп параметры ( тут 1 это болд )
+#
+
+
+snippet ered
+"\x1B[31;1m ${1:text}\x1B[0m"
+endsnippet
+
+snippet egreen
+"\x1B[32;1m ${1:text}\x1B[0m"
+endsnippet
+
+snippet eyellow
+"\x1B[33;1m ${1:text}\x1B[0m"
+endsnippet
+
+snippet eblue
+"\x1B[34;1m ${1:text}\x1B[0m"
+endsnippet
+
+snippet emagenta
+"\x1B[35;1m ${1:text}\x1B[0m"
+endsnippet
+
+snippet ecyan
+"\x1B[36;1m ${1:text}\x1B[0m"
+endsnippet
+
+snippet ewhite
+"\x1B[37;1m ${1:text}\x1B[0m"
+endsnippet
+
+
+
+snippet lred
+logger.Debug("\x1B[31;1m ${0}\x1B[0m")
+endsnippet
+
+snippet lgreen
+logger.Debug("\x1B[32;1m ${0}\x1B[0m")
+endsnippet
+
+snippet lyellow
+logger.Debug("\x1B[33;1m ${0}\x1B[0m")
+endsnippet
+
+snippet lblue
+logger.Debug("\x1B[34;1m ${0}\x1B[0m")
+endsnippet
+
+snippet lmagenta
+logger.Debug("\x1B[35;1m ${0}\x1B[0m")
+endsnippet
+
+snippet lcyan
+logger.Debug("\x1B[36;1m ${0}\x1B[0m")
+endsnippet
+
+snippet lwhite
+logger.Debug("\x1B[37;1m ${0}\x1B[0m")
+endsnippet
+
+
+# комбинация цветов и lf
+
+snippet lfred
+logger.Debug("\x1B[31;1m ${1}\x1B[0m = %+v", $1)
+endsnippet
+
+snippet lfgreen
+logger.Debug("\x1B[32;1m ${1}\x1B[0m = %+v", $1)
+endsnippet
+
+snippet lfyellow
+logger.Debug("\x1B[33;1m ${1}\x1B[0m = %+v", $1)
+endsnippet
+
+snippet lfblue
+logger.Debug("\x1B[34;1m ${1}\x1B[0m = %+v", $1)
+endsnippet
+
+snippet lfmagenta
+logger.Debug("\x1B[35;1m ${1}\x1B[0m = %+v", $1)
+endsnippet
+
+snippet lfcyan
+logger.Debug("\x1B[36;1m ${1}\x1B[0m = %+v", $1)
+endsnippet
+
+snippet lfwhite
+logger.Debug("\x1B[37;1m ${1}\x1B[0m = %+v", $1)
+endsnippet
+
+
+
+
+
+snippet ctest
+func Test$1(t *testing.T) {
+	Convey("$2", t, func() {
+		$3
+	})
+}
+endsnippet
+
+snippet conv
+Convey("$1", func() {
+	$2
+})
+endsnippet
+
+snippet sbe
+So($1, ShouldEqual, $2)
+endsnippet
+
+snippet sbn
+So($1, ShouldBeNil)
+endsnippet
+
+snippet sbt
+So($1, ShouldBeTrue)
+endsnippet
+
+snippet sbf
+So($1, ShouldBeFalse)
+endsnippet

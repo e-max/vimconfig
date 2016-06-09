@@ -1,0 +1,157 @@
+
+snippet #u "first unicode line" b
+# -*- coding: utf-8 -*-
+endsnippet
+
+# New Class
+snippet cls "Class with repr" b
+class ${1:ClassName}(${2:object}):
+	"""${3:docstring for $1}"""
+	def __init__(self, ${4:arg}):
+		${5:super($1, self).__init__()}
+		self.$4 = $4
+
+	def __repr__(self):
+		return u"%s(${6})" % (self.__class__.__name__, ${7:%()}
+
+	${8}
+endsnippet
+
+snippet \
+lambda ${1:arg}: ${2:}
+endsnippet
+
+snippet pudb
+import pudb; pudb.set_trace()
+endsnippet
+
+snippet il
+import logging
+endsnippet
+
+snippet gl
+logger = logging.getLogger("${1:logger}")
+endsnippet
+
+snippet ld
+logger.debug(u"${1:log}")
+endsnippet
+
+snippet li
+logger.info(u"${1:log}")
+endsnippet
+
+snippet lw
+logger.warning(u"${1:log}")
+endsnippet
+
+snippet le
+logger.error(u"${1:log}")
+endsnippet
+
+snippet lex
+logger.exception(u"${1:log}")
+endsnippet
+
+#сниппеты твистеда
+snippet idf
+from twisted.internet import defer
+endsnippet
+
+snippet idfr
+from twisted.internet import defer, reactor
+endsnippet
+
+#сниппеты для написания документации
+snippet :p
+:param ${1:name}: ${2:description}
+endsnippet
+
+snippet :t
+:type ${1:type}: ${2:description}
+endsnippet
+
+snippet :r
+:return ${1:description}
+endsnippet
+
+snippet :rt
+:rtype ${1:description}
+endsnippet
+
+#сниппеты цветов
+#
+# Как они вообще работают
+# Есть простая 16 цветная палитра , и есть 256 цветная
+# для 16 цветной
+# \x1B[31;1m ${1:text}\x1B[0m
+# здесь 31 означает цвет ( они могут быть от 30 до 37 )
+# а 1 - доп параметр. Например 1 - означает bold . Еще там могут быть всякие мигания и проч ерунда
+#
+# для 256 палитры
+# \x1B[38;5;12;1m text %s \x1B[0m
+# 38;5  - означают 256 цветную палитру
+# 12 - цвет  ( могут быть от 1 до 256)
+# 1 - доп параметры ( тут 1 это болд )
+#
+snippet ered
+"\x1B[31;1m ${1:text}\x1B[0m"
+endsnippet
+
+snippet egreen
+"\x1B[32;1m ${1:text}\x1B[0m"
+endsnippet
+
+snippet eyellow
+"\x1B[33;1m ${1:text}\x1B[0m"
+endsnippet
+
+snippet eblue
+"\x1B[34;1m ${1:text}\x1B[0m"
+endsnippet
+
+snippet emagenta
+"\x1B[35;1m ${1:text}\x1B[0m"
+endsnippet
+
+snippet ecyan
+"\x1B[36;1m ${1:text}\x1B[0m"
+endsnippet
+
+snippet ewhite
+"\x1B[37;1m ${1:text}\x1B[0m"
+endsnippet
+
+
+snippet pred
+print "\x1B[31;1m ${1:text}\x1B[0m"${2:, }${3:}
+endsnippet
+
+snippet pgreen
+print "\x1B[32;1m ${1:text}\x1B[0m"${2:, }${3:}
+endsnippet
+
+snippet pyellow
+print "\x1B[33;1m ${1:text}\x1B[0m"${2:, }${3:}
+endsnippet
+
+snippet pblue
+print "\x1B[34;1m ${1:text}\x1B[0m"${2:, }${3:}
+endsnippet
+
+snippet pmagenta
+print "\x1B[35;1m ${1:text}\x1B[0m"${2:, }${3:}
+endsnippet
+
+snippet pcyan
+print "\x1B[36;1m ${1:text}\x1B[0m"${2:, }${3:}
+endsnippet
+
+snippet pwhite
+print "\x1B[37;1m ${1:text}\x1B[0m"${2:, }${3:}
+endsnippet
+
+
+
+
+
