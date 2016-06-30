@@ -52,3 +52,7 @@ command! -range JSON <line1>,<line2>!python -m json.tool
 " по Ctrl-Enter вставляем пустую строку в Mormal Mode
 map <C-CR> o<ESC>
 
+
+
+set <F20>=[27;5;9~
+inoremap <F20> <C-R>=UltiSnips#ListSnippets()<CR>
