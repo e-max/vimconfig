@@ -1,6 +1,6 @@
 
 " Приравниваем регистр "" регистру "*
-" set clipboard=unnamed
+set clipboard=unnamed
 set encoding=utf-8
 
 set nocompatible          " We're running Vim, not Vi!
@@ -52,3 +52,13 @@ set completeopt=menu
 set complete-=1
 
 set path=.,,**
+
+
+" improve speed on looong lines.
+set synmaxcol=200
+
+set wildmenu
+set wildmode=full
+
+""" we need this to always open quickfix in the bottom of window
+autocmd FileType qf wincmd J

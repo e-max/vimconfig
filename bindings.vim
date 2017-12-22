@@ -2,10 +2,11 @@
 map ; :
 
 nmap <Leader>a :Ag <C-R><C-W>
+nmap <Leader>r :Rg <C-R><C-W>
 
-nmap <Leader>g :vim <C-R><C-W> **
+nmap <Leader>v :vim <C-R><C-W> **
 
-nmap <Leader>f :CommandT<CR>
+nmap <Leader>f :FZF<CR>
 
 " map < & > to indent blocks
 vnoremap < <gv
@@ -47,7 +48,21 @@ vmap <F9> <ESC>:make<CR>
 
 cmap w!! w !sudo tee % >/dev/null
 
-command! -range JSON <line1>,<line2>!python -m json.tool
+" command! -range JSON <line1>,<line2>!python -m json.tool
+command! -range JSON <line1>,<line2>!jq ''
+
+
+
+"  Mapping for go-vim
+map <LEADER>ga :GoAlternate<CR>
+map <LEADER>gi :GoInfo<CR>
+map <LEADER>gb :GoBuild<CR>
+map <LEADER>gt :GoTest<CR>
+map <LEADER>gf :GoTestFunc<CR>
+map <LEADER>gl :GoDecls<CR>
+map <LEADER>t :Tags<CR>
+
+
 
 " по Ctrl-Enter вставляем пустую строку в Mormal Mode
 map <C-CR> o<ESC>
@@ -56,3 +71,9 @@ map <C-CR> o<ESC>
 
 set <F20>=[27;5;9~
 inoremap <F20> <C-R>=UltiSnips#ListSnippets()<CR>
+inoremap <F10> <C-R>=UltiSnips#ListSnippets()<CR>
+
+
+" TagBar
+:map <F11> :TagbarToggle<CR>
+

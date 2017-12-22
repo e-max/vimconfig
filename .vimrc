@@ -8,6 +8,8 @@ source ~/.vim/vim-addon-manager.vim
 
 
 
+
+
 call vam#ActivateAddons([
             \'align',
             \'bufexplorer.zip',
@@ -18,11 +20,10 @@ call vam#ActivateAddons([
             \'matchit.zip',
             \'pyflakes%2441',
             \'repeat',
-        	\'SuperTab%1643',
+        	\'github:ervandew/supertab',
             \'UltiSnips',
             \'The_NERD_tree',
             \'surround',
-            \'tracwiki',
             \'vividchalk',
             \'ZoomWin',
             \'IndexedSearch',
@@ -34,23 +35,40 @@ call vam#ActivateAddons([
             \ 'github:gregsexton/gitv',
             \ 'Syntastic',
             \ 'vimproc',
-            \ 'github:stargrave/IviCC',
-            \ 'github:bitc/vim-hdevtools',
-            \ 'ghcmod',
-            \ 'github:ujihisa/neco-ghc',
-            \ 'github:dag/vim2hs',
             \ 'github:bling/vim-airline',
-            \ 'Textile_for_VIM',
-            \ 'jedi-vim',
             \ 'ag',
+            \ 'github:jremmen/vim-ripgrep',
 			\ 'vim-snippets',
 			\ 'github:fatih/vim-go.git',
-			\'KeyboardLayoutSwitcher',
-			\'github:plasticboy/vim-markdown',
+			\ 'github:plasticboy/vim-markdown',
+			\ 'github:andrewstuart/vim-kubernetes',
+			\ 'github:roxma/vim-paste-easy',
+            \ 'github:christianrondeau/vim-base64',
+            \ 'github:hashivim/vim-terraform',
+            \ 'github:junegunn/fzf',
+            \ 'github:junegunn/fzf.vim',
+            \ 'github:Shougo/deoplete.nvim',
+            \ 'github:zchee/deoplete-go',
+            \ 'github:cazador481/fakeclip.neovim',
+            \ 'github:airblade/vim-gitgutter.git',
+			\ 'github:cespare/vim-toml',
+			\ 'github:fidian/hexmode',
+            \ 'github:rust-lang/rust.vim',
+			\ 'github:autozimu/LanguageClient-neovim',
+			\'Tabular',
 			\'DirDiff',
 			\'abolish',
-            \'github:saltstack/salt-vim.git',
+			\'nginx',
             \],{'auto_install' : 0})
+
+
+" \ 'github:racer-rust/vim-racer',
+" \ 'github:sebastianmarkow/deoplete-rust',
+
+if has('nvim')
+	let g:deoplete#enable_at_startup = 1
+	let g:vim_fakeclip_tmux_plus=1
+end
 
 
 " \"vim-xkbswitch"

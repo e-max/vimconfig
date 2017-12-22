@@ -1,0 +1,114 @@
+
+snippet ff
+println!("${1} = {:?}", $1);
+endsnippet
+
+
+#сниппеты цветов
+#
+# Как они вообще работают
+# Есть простая 16 цветная палитра , и есть 256 цветная
+# для 16 цветной
+# \x1B[31;1m ${1:text}\x1B[0m
+# здесь 31 означает цвет ( они могут быть от 30 до 37 );
+# а 1 - доп параметр. Например 1 - означает bold . Еще там могут быть всякие мигания и проч ерунда
+#
+# для 256 палитры
+# \x1B[38;5;12;1m text %s \x1B[0m
+# 38;5  - означают 256 цветную палитру
+# 12 - цвет  ( могут быть от 1 до 256);
+# 1 - доп параметры ( тут 1 это болд );
+#
+
+
+snippet ered
+"\x1B[31;1m ${1:text}\x1B[0m"
+endsnippet
+
+snippet egreen
+"\x1B[32;1m ${1:text}\x1B[0m"
+endsnippet
+
+snippet eyellow
+"\x1B[33;1m ${1:text}\x1B[0m"
+endsnippet
+
+snippet eblue
+"\x1B[34;1m ${1:text}\x1B[0m"
+endsnippet
+
+snippet emagenta
+"\x1B[35;1m ${1:text}\x1B[0m"
+endsnippet
+
+snippet ecyan
+"\x1B[36;1m ${1:text}\x1B[0m"
+endsnippet
+
+snippet ewhite
+"\x1B[37;1m ${1:text}\x1B[0m"
+endsnippet
+
+
+
+
+# комбинация цветов и ff
+
+snippet ffred
+println!("\x1B[31;1m ${1}\x1B[0m = {:?}", $1);
+endsnippet
+
+snippet ffgreen
+println!("\x1B[32;1m ${1}\x1B[0m = {:?}", $1);
+endsnippet
+
+snippet ffyellow
+println!("\x1B[33;1m ${1}\x1B[0m = {:?}", $1);
+endsnippet
+
+snippet ffblue
+println!("\x1B[34;1m ${1}\x1B[0m = {:?}", $1);
+endsnippet
+
+snippet ffmagenta
+println!("\x1B[35;1m ${1}\x1B[0m = {:?}", $1);
+endsnippet
+
+snippet ffcyan
+println!("\x1B[36;1m ${1}\x1B[0m = {:?}", $1);
+endsnippet
+
+snippet ffwhite
+println!("\x1B[37;1m ${1}\x1B[0m = {:?}", $1);
+endsnippet
+
+# комбинация цветов и fn
+
+snippet fnred
+println!("\x1B[31;1m ${1}\x1B[0m");
+endsnippet
+
+snippet fngreen
+println!("\x1B[32;1m ${1}\x1B[0m");
+endsnippet
+
+snippet fnyellow
+println!("\x1B[33;1m ${1}\x1B[0m");
+endsnippet
+
+snippet fnblue
+println!("\x1B[34;1m ${1}\x1B[0m");
+endsnippet
+
+snippet fnmagenta
+println!("\x1B[35;1m ${1}\x1B[0m");
+endsnippet
+
+snippet fncyan
+println!("\x1B[36;1m ${1}\x1B[0m");
+endsnippet
+
+snippet fnwhite
+println!("\x1B[37;1m ${1}\x1B[0m");
+endsnippet
+

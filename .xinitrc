@@ -12,7 +12,6 @@
 localectl set-x11-keymap us,ru microsoft4000 winkeys grp:caps_toggle
 eval `ssh-agent`
 sbxkb &
-~/.dropbox-dist/dropboxd &
 /usr/lib/notification-daemon-1.0/notification-daemon &
 #numlockx on
 #exec wmaker

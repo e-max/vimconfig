@@ -1,4 +1,7 @@
 
+snippet todo "TODO" !b
+//TODO: Max <max.lavrenov@optiopay.com> ${0}
+endsnippet
 
 snippet errp "Error return pair" !b
 if err != nil {
@@ -7,34 +10,17 @@ if err != nil {
 ${0}
 endsnippet
 
-snippet gl "logging.MustGetLogger" !b
-var logger = logging.MustGetLogger(${0})
+snippet errlp "Error panic" !b
+if err != nil {
+	log.Panic(err)
+}
+${0}
 endsnippet
 
-snippet le "logger.Error" !b
-logger.Error(${0})
-endsnippet
 
-snippet li "logger.Info" !b
-logger.Info(${0})
+snippet lf "log.Printf variable"
+log.Printf("${1} = %+v\n", $1)
 endsnippet
-
-snippet ld "logger.Debug" !b
-logger.Debug(${0})
-endsnippet
-
-snippet lw "logger.Warn" !b
-logger.Warn(${0})
-endsnippet
-
-snippet ln "logger.Notice" !b
-logger.Notice(${0})
-endsnippet
-
-snippet lf "logger.Debug variable"
-logger.Debug("${1} = %+v\n", $1)
-endsnippet
-
 
 
 snippet bp "godebug breakpoint"
@@ -107,67 +93,126 @@ endsnippet
 
 
 snippet lred
-logger.Debug("\x1B[31;1m ${0}\x1B[0m")
+log.Printf("\x1B[31;1m ${0}\x1B[0m")
 endsnippet
 
 snippet lgreen
-logger.Debug("\x1B[32;1m ${0}\x1B[0m")
+log.Printf("\x1B[32;1m ${0}\x1B[0m")
 endsnippet
 
 snippet lyellow
-logger.Debug("\x1B[33;1m ${0}\x1B[0m")
+log.Printf("\x1B[33;1m ${0}\x1B[0m")
 endsnippet
 
 snippet lblue
-logger.Debug("\x1B[34;1m ${0}\x1B[0m")
+log.Printf("\x1B[34;1m ${0}\x1B[0m")
 endsnippet
 
 snippet lmagenta
-logger.Debug("\x1B[35;1m ${0}\x1B[0m")
+log.Printf("\x1B[35;1m ${0}\x1B[0m")
 endsnippet
 
 snippet lcyan
-logger.Debug("\x1B[36;1m ${0}\x1B[0m")
+log.Printf("\x1B[36;1m ${0}\x1B[0m")
 endsnippet
 
 snippet lwhite
-logger.Debug("\x1B[37;1m ${0}\x1B[0m")
+log.Printf("\x1B[37;1m ${0}\x1B[0m")
 endsnippet
 
 
 # комбинация цветов и lf
 
 snippet lfred
-logger.Debug("\x1B[31;1m ${1}\x1B[0m = %+v", $1)
+log.Printf("\x1B[31;1m ${1}\x1B[0m = %+v", $1)
 endsnippet
 
 snippet lfgreen
-logger.Debug("\x1B[32;1m ${1}\x1B[0m = %+v", $1)
+log.Printf("\x1B[32;1m ${1}\x1B[0m = %+v", $1)
 endsnippet
 
 snippet lfyellow
-logger.Debug("\x1B[33;1m ${1}\x1B[0m = %+v", $1)
+log.Printf("\x1B[33;1m ${1}\x1B[0m = %+v", $1)
 endsnippet
 
 snippet lfblue
-logger.Debug("\x1B[34;1m ${1}\x1B[0m = %+v", $1)
+log.Printf("\x1B[34;1m ${1}\x1B[0m = %+v", $1)
 endsnippet
 
 snippet lfmagenta
-logger.Debug("\x1B[35;1m ${1}\x1B[0m = %+v", $1)
+log.Printf("\x1B[35;1m ${1}\x1B[0m = %+v", $1)
 endsnippet
 
 snippet lfcyan
-logger.Debug("\x1B[36;1m ${1}\x1B[0m = %+v", $1)
+log.Printf("\x1B[36;1m ${1}\x1B[0m = %+v", $1)
 endsnippet
 
 snippet lfwhite
-logger.Debug("\x1B[37;1m ${1}\x1B[0m = %+v", $1)
+log.Printf("\x1B[37;1m ${1}\x1B[0m = %+v", $1)
 endsnippet
 
 
+# комбинация цветов и ff
 
+snippet ffred
+fmt.Printf("\x1B[31;1m ${1}\x1B[0m = %+v\n", $1)
+endsnippet
 
+snippet ffgreen
+fmt.Printf("\x1B[32;1m ${1}\x1B[0m = %+v\n", $1)
+endsnippet
+
+snippet ffyellow
+fmt.Printf("\x1B[33;1m ${1}\x1B[0m = %+v\n", $1)
+endsnippet
+
+snippet ffblue
+fmt.Printf("\x1B[34;1m ${1}\x1B[0m = %+v\n", $1)
+endsnippet
+
+snippet ffmagenta
+fmt.Printf("\x1B[35;1m ${1}\x1B[0m = %+v\n", $1)
+endsnippet
+
+snippet ffcyan
+fmt.Printf("\x1B[36;1m ${1}\x1B[0m = %+v\n", $1)
+endsnippet
+
+snippet ffwhite
+fmt.Printf("\x1B[37;1m ${1}\x1B[0m = %+v\n", $1)
+endsnippet
+
+# комбинация цветов и fn
+
+snippet fnred
+fmt.Println("\x1B[31;1m ${1}\x1B[0m")
+endsnippet
+
+snippet fngreen
+fmt.Println("\x1B[32;1m ${1}\x1B[0m")
+endsnippet
+
+snippet fnyellow
+fmt.Println("\x1B[33;1m ${1}\x1B[0m")
+endsnippet
+
+snippet fnblue
+fmt.Println("\x1B[34;1m ${1}\x1B[0m")
+endsnippet
+
+snippet fnmagenta
+fmt.Println("\x1B[35;1m ${1}\x1B[0m")
+endsnippet
+
+snippet fncyan
+fmt.Println("\x1B[36;1m ${1}\x1B[0m")
+endsnippet
+
+snippet fnwhite
+fmt.Println("\x1B[37;1m ${1}\x1B[0m")
+endsnippet
+
+# go convey
 
 snippet ctest
 func Test$1(t *testing.T) {
@@ -198,3 +243,6 @@ endsnippet
 snippet sbf
 So($1, ShouldBeFalse)
 endsnippet
+
+
+
