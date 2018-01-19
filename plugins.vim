@@ -20,20 +20,6 @@ let g:gist_clip_command = 'xclip -selection clipboard'
 
 
 
-" python-mode settings
-let g:pymode_utils_whitespaces = 0
-let g:pymode_breakpoint = 0
-let g:pymode_folding = 0
-
-
-"ROPE settings
-
-let ropevim_vim_completion=0
-let ropevim_extended_complete=0
-map <C-c>i :call RopeAutoImport()<CR>
-map <C-c>o :call RopeOrganizeImports()<CR>
-
-
 "UltiSnips settings
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "/home/e-max/.vim/mysnippets/"]
 
@@ -135,12 +121,15 @@ let g:tagbar_type_rst = {
 
 "" Support for rust 
 
+if has('nvim')
+	let g:deoplete#enable_at_startup = 1
+	let g:vim_fakeclip_tmux_plus=1
+end
+
+let g:syntastic_rust_checkers = ['cargo']
+
 let g:racer_cmd="/home/e-max/.cargo/bin/racer"
 let g:racer_experimental_completer = 1
-"au FileType rust nmap gd <Plug>(rust-def)
-"au FileType rust nmap gs <Plug>(rust-def-split)
-"au FileType rust nmap gx <Plug>(rust-def-vertical)
-"au FileType rust nmap <leader>gd <Plug>(rust-doc)
 
 let g:rustfmt_autosave = 1
 
@@ -148,7 +137,8 @@ let g:deoplete#sources#rust#racer_binary='/home/e-max/.cargo/bin/racer'
 
 let g:deoplete#sources#rust#rust_source_path='/home/e-max/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/'
 
-"echo g:deoplete#sources#rust#rust_source_path
+setlocal omnifunc=racer#RacerComplete
+
 
 
 
@@ -161,3 +151,8 @@ set updatetime=250 "" how often git gutter checks for updates
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
     \ }
+
+
+autocmd BufReadPost *.rs setlocal filetype=rust
+
+let g:LanguageClient_autoStart = 1

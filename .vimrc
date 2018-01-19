@@ -1,80 +1,69 @@
-filetype off
+"filetype off
+
+
+
+call plug#begin('~/.vim/plugged')
+
+" Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': './install.sh' }
+Plug 'jlanzarotta/bufexplorer'
+Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-ragtag'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-eunuch'
+Plug 'vim-scripts/kwbdi.vim'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'scrooloose/nerdtree'
+Plug 'henrik/vim-indexed-search'
+Plug 'nanotech/jellybeans.vim', {'rtp': 'jellybeans'}
+Plug 'scrooloose/nerdcommenter'
+Plug 'majutsushi/tagbar'
+Plug 'gregsexton/gitv'
+Plug 'vim-syntastic/syntastic'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+Plug 'bling/vim-airline'
+Plug 'jremmen/vim-ripgrep'
+Plug 'fatih/vim-go'
+Plug 'plasticboy/vim-markdown'
+Plug 'roxma/vim-paste-easy'
+Plug 'christianrondeau/vim-base64'
+Plug 'hashivim/vim-terraform'
+Plug 'junegunn/fzf', { 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+if has('nvim')
+	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+	Plug 'Shougo/deoplete.nvim'
+	Plug 'roxma/nvim-yarp'
+	Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
+Plug 'sebastianmarkow/deoplete-rust'
+
+Plug 'zchee/deoplete-go', { 'do': 'make'}
+
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+
+Plug 'cazador481/fakeclip.neovim'
+Plug 'airblade/vim-gitgutter'
+Plug 'cespare/vim-toml'
+Plug 'fidian/hexmode'
+Plug 'rust-lang/rust.vim'
+Plug 'godlygeek/tabular'
+Plug 'will133/vim-dirdiff'
+Plug 'racer-rust/vim-racer'
+Plug 'flazz/vim-colorschemes'
+
+call plug#end()
+
+"call deoplete#enable_logging('DEBUG', '/tmp/deoplete.log')
 
 source ~/.vim/global.vim
 source ~/.vim/bindings.vim
 source ~/.vim/plugins.vim
-source ~/.vim/vim-addon-manager.vim
-
-
-
-
-
-
-call vam#ActivateAddons([
-            \'align',
-            \'bufexplorer.zip',
-            \'EasyMotion',
-            \'fugitive',
-            \'kwbdi',
-            \'lodgeit',
-            \'matchit.zip',
-            \'pyflakes%2441',
-            \'repeat',
-        	\'github:ervandew/supertab',
-            \'UltiSnips',
-            \'The_NERD_tree',
-            \'surround',
-            \'vividchalk',
-            \'ZoomWin',
-            \'IndexedSearch',
-            \'jellybeans',
-            \'The_NERD_Commenter',
-            \'Tagbar',
-            \'ragtag',
-            \ 'github:tpope/vim-eunuch',
-            \ 'github:gregsexton/gitv',
-            \ 'Syntastic',
-            \ 'vimproc',
-            \ 'github:bling/vim-airline',
-            \ 'ag',
-            \ 'github:jremmen/vim-ripgrep',
-			\ 'vim-snippets',
-			\ 'github:fatih/vim-go.git',
-			\ 'github:plasticboy/vim-markdown',
-			\ 'github:andrewstuart/vim-kubernetes',
-			\ 'github:roxma/vim-paste-easy',
-            \ 'github:christianrondeau/vim-base64',
-            \ 'github:hashivim/vim-terraform',
-            \ 'github:junegunn/fzf',
-            \ 'github:junegunn/fzf.vim',
-            \ 'github:Shougo/deoplete.nvim',
-            \ 'github:zchee/deoplete-go',
-            \ 'github:cazador481/fakeclip.neovim',
-            \ 'github:airblade/vim-gitgutter.git',
-			\ 'github:cespare/vim-toml',
-			\ 'github:fidian/hexmode',
-            \ 'github:rust-lang/rust.vim',
-			\ 'github:autozimu/LanguageClient-neovim',
-			\'Tabular',
-			\'DirDiff',
-			\'abolish',
-			\'nginx',
-            \],{'auto_install' : 0})
-
-
-" \ 'github:racer-rust/vim-racer',
-" \ 'github:sebastianmarkow/deoplete-rust',
-
-if has('nvim')
-	let g:deoplete#enable_at_startup = 1
-	let g:vim_fakeclip_tmux_plus=1
-end
-
-
-" \"vim-xkbswitch"
-" \"KeyboardLayoutSwitcher",
-" \"github:fatih/vim-go.git",
-" \"github:Valloric/YouCompleteMe.git"
-
-
-source ~/.vim/gui.vim

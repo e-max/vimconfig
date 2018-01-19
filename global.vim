@@ -62,3 +62,5 @@ set wildmode=full
 
 """ we need this to always open quickfix in the bottom of window
 autocmd FileType qf wincmd J
+
+colorscheme jellybeans
