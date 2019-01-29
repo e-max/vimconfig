@@ -1,6 +1,6 @@
 "filetype off
 
-
+let g:rustfmt_autosave = 0
 
 call plug#begin('~/.vim/plugged')
 
@@ -58,11 +58,18 @@ Plug 'godlygeek/tabular'
 Plug 'will133/vim-dirdiff'
 Plug 'racer-rust/vim-racer'
 Plug 'flazz/vim-colorschemes'
+Plug 'mattn/webapi-vim'
+Plug 'mattn/gist-vim'
+Plug 'zchee/deoplete-jedi'
 
 call plug#end()
 
 "call deoplete#enable_logging('DEBUG', '/tmp/deoplete.log')
+"
+autocmd BufRead,BufNewFile *.tpl set filetype=gotexttmpl
+"autocmd BufReadPost,BufNewFile *.rs setlocal filetype=rust
 autocmd BufReadPost,BufNewFile  *.fizz setlocal filetype=anko
+
 
 source ~/.vim/global.vim
 source ~/.vim/bindings.vim

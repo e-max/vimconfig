@@ -126,7 +126,7 @@ if has('nvim')
 	let g:vim_fakeclip_tmux_plus=1
 end
 
-let g:syntastic_rust_checkers = ['cargo']
+let g:syntastic_rust_checkers = []
 
 let g:racer_cmd="/home/e-max/.cargo/bin/racer"
 let g:racer_experimental_completer = 1
@@ -136,6 +136,7 @@ let g:rustfmt_autosave = 1
 let g:deoplete#sources#rust#racer_binary='/home/e-max/.cargo/bin/racer'
 
 let g:deoplete#sources#rust#rust_source_path='/home/e-max/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/'
+let g:deoplete#sources#rust#disable_keymap=1
 
 setlocal omnifunc=racer#RacerComplete
 
