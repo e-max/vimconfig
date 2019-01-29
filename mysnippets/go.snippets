@@ -10,6 +10,48 @@ if err != nil {
 ${0}
 endsnippet
 
+snippet errw "Errors wrap" !b
+if err != nil {
+	return errors.Wrap(err, "${1}")
+}
+${0}
+endsnippet
+
+snippet errw, "Errors wrap with pair" !b
+if err != nil {
+	return nil, errors.Wrap(err, "${1}")
+}
+${0}
+endsnippet
+
+snippet errwf "Errors wrapf" !b
+if err != nil {
+	return errors.Wrapf(err, "${1}", ${2})
+}
+${0}
+endsnippet
+
+snippet errwf, "Errors wrapf with pair" !b
+if err != nil {
+	return nil, errors.Wrapf(err, "${1}", ${2})
+}
+${0}
+endsnippet
+
+snippet errs "Errors WithStack" !b
+if err != nil {
+	return errors.WithStack(err)
+}
+${0}
+endsnippet
+
+snippet errs, "Errors WithStack with pair" !b
+if err != nil {
+	return nil, errors.WithStack(err)
+}
+${0}
+endsnippet
+
 snippet errlp "Error panic" !b
 if err != nil {
 	log.Panic(err)
