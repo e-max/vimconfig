@@ -62,6 +62,7 @@ Plug 'flazz/vim-colorschemes'
 call plug#end()
 
 "call deoplete#enable_logging('DEBUG', '/tmp/deoplete.log')
+autocmd BufReadPost,BufNewFile  *.fizz setlocal filetype=anko
 
 source ~/.vim/global.vim
 source ~/.vim/bindings.vim
