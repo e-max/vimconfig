@@ -1,7 +1,7 @@
 "colorscheme vividchalk
 colorscheme jellybeans
-set guifont=Terminus\ 12                                                                                                                    
-"set guifont=Consolas\ 12
+set guifont=DejaVu\ Sans\ Mono\ 12
+set guioptions=aegirLt
 "
 "отключаем visual beep из-то того что драйвера nvidia с ней очень тормозят
 set t_vb=""
