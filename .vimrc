@@ -30,7 +30,6 @@ Plug 'fatih/vim-go'
 Plug 'plasticboy/vim-markdown'
 Plug 'roxma/vim-paste-easy'
 Plug 'christianrondeau/vim-base64'
-Plug 'hashivim/vim-terraform'
 Plug 'junegunn/fzf', { 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 if has('nvim')
@@ -50,7 +49,7 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'do': 'bash install.sh',
     \ }
 
-Plug 'cazador481/fakeclip.neovim'
+" Plug 'cazador481/fakeclip.neovim'
 Plug 'airblade/vim-gitgutter'
 Plug 'cespare/vim-toml'
 Plug 'fidian/hexmode'
