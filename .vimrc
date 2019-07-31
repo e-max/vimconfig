@@ -45,9 +45,9 @@ Plug 'sebastianmarkow/deoplete-rust'
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 
 Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
+	\ 'branch': 'next',
+	\ 'do': 'bash install.sh',
+	\ }
 
 " Plug 'cazador481/fakeclip.neovim'
 Plug 'airblade/vim-gitgutter'
@@ -61,6 +61,7 @@ Plug 'flazz/vim-colorschemes'
 Plug 'mattn/webapi-vim'
 Plug 'mattn/gist-vim'
 Plug 'zchee/deoplete-jedi'
+Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
 
 call plug#end()
 
