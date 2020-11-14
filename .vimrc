@@ -4,7 +4,6 @@ let g:rustfmt_autosave = 0
 
 call plug#begin('~/.vim/plugged')
 
-" Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': './install.sh' }
 Plug 'jlanzarotta/bufexplorer'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-fugitive'
@@ -14,9 +13,9 @@ Plug 'tpope/vim-ragtag'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-eunuch'
 Plug 'vim-scripts/kwbdi.vim'
-Plug 'SirVer/ultisnips'
+"Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'scrooloose/nerdtree'
+Plug 'preservim/nerdtree'
 Plug 'henrik/vim-indexed-search'
 Plug 'nanotech/jellybeans.vim', {'rtp': 'jellybeans'}
 Plug 'scrooloose/nerdcommenter'
@@ -25,51 +24,57 @@ Plug 'gregsexton/gitv'
 Plug 'vim-syntastic/syntastic'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'bling/vim-airline'
-Plug 'jremmen/vim-ripgrep'
+"Plug 'jremmen/vim-ripgrep'
 Plug 'fatih/vim-go'
 Plug 'plasticboy/vim-markdown'
 Plug 'roxma/vim-paste-easy'
 Plug 'christianrondeau/vim-base64'
 Plug 'junegunn/fzf', { 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-if has('nvim')
-	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-	Plug 'Shougo/deoplete.nvim'
-	Plug 'roxma/nvim-yarp'
-	Plug 'roxma/vim-hug-neovim-rpc'
-endif
 
-Plug 'sebastianmarkow/deoplete-rust'
-
-Plug 'zchee/deoplete-go', { 'do': 'make'}
-
-Plug 'autozimu/LanguageClient-neovim', {
-	\ 'branch': 'next',
-	\ 'do': 'bash install.sh',
-	\ }
-
-" Plug 'cazador481/fakeclip.neovim'
 Plug 'airblade/vim-gitgutter'
 Plug 'cespare/vim-toml'
 Plug 'fidian/hexmode'
 Plug 'rust-lang/rust.vim'
 Plug 'godlygeek/tabular'
 Plug 'will133/vim-dirdiff'
-Plug 'racer-rust/vim-racer'
 Plug 'flazz/vim-colorschemes'
+" needed for gist
 Plug 'mattn/webapi-vim'
 Plug 'mattn/gist-vim'
-Plug 'zchee/deoplete-jedi'
-Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'lambdalisue/suda.vim'
+Plug 'vimwiki/vimwiki'
+Plug 'liuchengxu/vista.vim'
+Plug 'rhysd/vim-grammarous'
+Plug 'lyokha/vim-xkbswitch'
+" {{{
+  let g:XkbSwitchEnabled = 1
+  let g:XkbSwitchLib = '/usr/lib/libxkbswitch.so'
+  let g:XkbSwitchNLayout = 'us'
+  let g:XkbSwitchILayout = 'us'
+
+  function! RestoreKeyboardLayout(key)
+    call system("xkb-switch -s 'us'")
+    execute 'normal! ' . a:key
+  endfunction
+
+  nnoremap <silent> р :call RestoreKeyboardLayout('h')<CR>
+  nnoremap <silent> о :call RestoreKeyboardLayout('j')<CR>
+  nnoremap <silent> л :call RestoreKeyboardLayout('k')<CR>
+  nnoremap <silent> д :call RestoreKeyboardLayout('l')<CR>
+" }}}
+
+
+
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
-"call deoplete#enable_logging('DEBUG', '/tmp/deoplete.log')
-"
 autocmd BufRead,BufNewFile *.tpl set filetype=gotexttmpl
-"autocmd BufReadPost,BufNewFile *.rs setlocal filetype=rust
 autocmd BufReadPost,BufNewFile  *.fizz setlocal filetype=anko
+
+nmap <leader>u2d "mciw<C-R>=strftime("%c", @m)<CR><ESC>
 
 
 source ~/.vim/global.vim

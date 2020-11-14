@@ -1,4 +1,45 @@
 
+snippet trace
+trace!("${1}");
+endsnippet
+
+snippet debug
+debug!("${1}");
+endsnippet
+
+snippet info
+info!("${1}");
+endsnippet
+
+snippet warn
+warn!("${1}");
+endsnippet
+
+snippet error,
+error!("${1}");
+endsnippet
+
+
+snippet trace,
+trace!("${1} = {:?}", $1);
+endsnippet
+
+snippet debug,
+debug!("${1} = {:?}", $1);
+endsnippet
+
+snippet info,
+info!("${1} = {:?}", $1);
+endsnippet
+
+snippet warn,
+warn!("${1} = {:?}", $1);
+endsnippet
+
+snippet error,
+error!("${1} = {:?}", $1);
+endsnippet
+
 snippet ff
 println!("${1} = {:?}", $1);
 endsnippet

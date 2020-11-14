@@ -1,6 +1,8 @@
 
 " Приравниваем регистр "" регистру "*
 set clipboard=unnamed
+set clipboard+=unnamedplus
+
 set encoding=utf-8
 
 set nocompatible          " We're running Vim, not Vi!
@@ -37,8 +39,6 @@ set smarttab      " insert tabs on the start of a line according to shiftwidth, 
 "Search options
 nnoremap / /\v
 vnoremap / /\v
-set ignorecase
-set smartcase
 set hlsearch      " highlight search terms
 set incsearch     " show search matches as you type
 set gdefault        " автоматически добавляет /g  к каждой строке замены (то есть замены происходят по всей строке)
@@ -64,3 +64,12 @@ set wildmode=full
 autocmd FileType qf wincmd J
 
 colorscheme jellybeans
+
+
+
+
+
+
+
+
+

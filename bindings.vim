@@ -2,10 +2,7 @@ au VimEnter * :silent !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 au VimLeave * :silent !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
 map ; :
 
-nmap <Leader>a :Ag <C-R><C-W>
 nmap <Leader>r :Rg <C-R><C-W>
-
-nmap <Leader>v :vim <C-R><C-W> **
 
 nmap <Leader>f :FZF<CR>
 
@@ -17,6 +14,8 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 map <C-h> <C-w>h
+
+
 
 
 "my bindings
@@ -59,5 +58,5 @@ inoremap <F10> <C-R>=UltiSnips#ListSnippets()<CR>
 
 
 " TagBar
-:map <F11> :TagbarToggle<CR>
+":map <F11> :TagbarToggle<CR>
 
