@@ -31,6 +31,7 @@ Plug 'roxma/vim-paste-easy'
 Plug 'christianrondeau/vim-base64'
 Plug 'junegunn/fzf', { 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'yuki-ycino/fzf-preview.vim', { 'branch': 'release/remote', 'do': ':UpdateRemotePlugins' }
 
 Plug 'airblade/vim-gitgutter'
 Plug 'cespare/vim-toml'

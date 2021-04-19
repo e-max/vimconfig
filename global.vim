@@ -14,6 +14,7 @@ filetype on
 filetype plugin on " Enable filetype-specific indenting and plugins
 filetype indent on 
 
+set mouse=a
 
 set autowriteall 
 set nobackup
@@ -37,8 +38,6 @@ set smarttab      " insert tabs on the start of a line according to shiftwidth, 
 
 
 "Search options
-nnoremap / /\v
-vnoremap / /\v
 set hlsearch      " highlight search terms
 set incsearch     " show search matches as you type
 set gdefault        " автоматически добавляет /g  к каждой строке замены (то есть замены происходят по всей строке)

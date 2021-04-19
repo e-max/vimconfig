@@ -1,11 +1,11 @@
 
-let g:kls_switcherPath = "~/.vim/vim-addons/KeyboardLayoutSwitcher/bin/KeyboardLayoutSwitcher"
-let g:kls_focusSwitching=0
-
-
 " NerdTree
 
 let NERDTreeRespectWildIgnore=1
+
+
+" Fugitive
+set diffopt+=vertical
 
 
 " gits plugin
@@ -17,100 +17,12 @@ let g:gist_clip_command = 'xclip -selection clipboard'
 "let g:UltiSnipsSnippetDirectories=["UltiSnips", "/home/e-max/.vim/mysnippets/"]
 " 
 
-if !has("gui_running")
-    "это решение проблемы с неработающим в консоли Ctrl-Tab.  Я перемапил его в
-    "~/.Xresourses и сюда забил это новое значение
-    let g:UltiSnipsListSnippets = "{"
-endif
-
-
-"vim-xkbswitch settings
-let g:XkbSwitchEnabled = 1
-
-
-" go support
-"
-"
-
-let g:go_fmt_command = "goimports"
-
-let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
-
-let g:go_bin_path = "/home/e-max/workspace/go/bin/"
-
 
 
 "  vim-markdown
 let g:vim_markdown_folding_disabled = 1
 
 
-"fzf
-
-let g:fzf_tags_command = 'ctags -R --languages=+Go'
-
-
-" TAGBAR
-
-
-
-
-
-" support for RestructuredText
-let g:tagbar_type_rst = {
-    \ 'ctagstype': 'rst',
-    \ 'ctagsbin' : '/home/e-max/.vim/bin/rst2ctags.py',
-    \ 'ctagsargs' : '-f - --sort=yes',
-    \ 'kinds' : [
-        \ 's:sections',
-        \ 'i:images'
-    \ ],
-    \ 'sro' : '|',
-    \ 'kind2scope' : {
-        \ 's' : 'section',
-    \ },
-    \ 'sort': 0,
-\ }
-
-
-let g:rust_use_custom_ctags_defs = 1  " if using rust.vim
-let g:tagbar_type_rust = {
-  \ 'ctagsbin' : '/usr/local/bin/ctags',
-  \ 'ctagstype' : 'rust',
-  \ 'kinds' : [
-      \ 'n:modules',
-      \ 's:structures:1',
-      \ 'i:interfaces',
-      \ 'c:implementations',
-      \ 'f:functions:1',
-      \ 'g:enumerations:1',
-      \ 't:type aliases:1:0',
-      \ 'v:constants:1:0',
-      \ 'M:macros:1',
-      \ 'm:fields:1:0',
-      \ 'e:enum variants:1:0',
-      \ 'P:methods:1',
-  \ ],
-  \ 'sro': '::',
-  \ 'kind2scope' : {
-      \ 'n': 'module',
-      \ 's': 'struct',
-      \ 'i': 'interface',
-      \ 'c': 'implementation',
-      \ 'f': 'function',
-      \ 'g': 'enum',
-      \ 't': 'typedef',
-      \ 'v': 'variable',
-      \ 'M': 'macro',
-      \ 'm': 'field',
-      \ 'e': 'enumerator',
-      \ 'P': 'method',
-  \ },
-  \ }
-
-
-"" coc-snippets
-imap <TAB> <Plug>(coc-snippets-expand)
 
 "" Support for rust 
 
@@ -131,7 +43,7 @@ set updatetime=250 "" how often git gutter checks for updates
 let g:vista_default_executive="coc"
 let g:vista#renderer#enable_icon = 1
 " Find symbol of current document.
-nnoremap <silent> <leader>o  :Vista finder<cr>
+nnoremap <silent> <leader>s  :Vista finder<cr>
 nnoremap <silent> <F11>  :Vista!!<cr>
 
 """""""""""""""" NEW """"""""""""""""""""""""""
@@ -159,19 +71,22 @@ set shortmess+=c
 " diagnostics appear/become resolved.
 set signcolumn=yes
 
-" Use tab for trigger completion with characters ahead and navigate.
+" Make <tab> used for trigger completion, completion confirm, snippet expand 
+" and jump like VSCode.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
-inoremap <silent><expr> <C-TAB>
-      \ pumvisible() ? "\<C-n>" :
+
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
 
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
@@ -233,6 +148,8 @@ nmap <leader>ac  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
 nmap <leader>qf  <Plug>(coc-fix-current)
 
+nnoremap <silent> <space>i  :call CocActionAsync('codeAction', '', 'Implement missing members')<cr>
+
 " Introduce function text object
 " NOTE: Requires 'textDocument.documentSymbol' support from the language server.
 xmap if <Plug>(coc-funcobj-i)
@@ -279,8 +196,6 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 
-" Search workspace symbols.
-nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
 
 
 

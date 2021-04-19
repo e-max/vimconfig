@@ -1,10 +1,9 @@
-au VimEnter * :silent !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
-au VimLeave * :silent !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
 map ; :
 
 nmap <Leader>r :Rg <C-R><C-W>
 
-nmap <Leader>f :FZF<CR>
+nmap <Leader>f :Files<CR>
+nmap <Leader>bb :Buffers<CR>
 
 " map < & > to indent blocks
 vnoremap < <gv
@@ -51,10 +50,6 @@ cmap w!! w !sudo tee % >/dev/null
 " command! -range JSON <line1>,<line2>!python -m json.tool
 command! -range JSON <line1>,<line2>!jq ''
 
-
-set <F20>=[27;5;9~
-inoremap <F20> <C-R>=UltiSnips#ListSnippets()<CR>
-inoremap <F10> <C-R>=UltiSnips#ListSnippets()<CR>
 
 
 " TagBar
