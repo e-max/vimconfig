@@ -34,7 +34,6 @@ Plug 'mattn/webapi-vim'
 Plug 'mattn/gist-vim'
 Plug 'lambdalisue/suda.vim'
 Plug 'vimwiki/vimwiki'
-Plug 'liuchengxu/vista.vim'
 Plug 'rhysd/vim-grammarous'
 Plug 'lyokha/vim-xkbswitch'
 " {{{
@@ -57,10 +56,20 @@ Plug 'lyokha/vim-xkbswitch'
 
 
 Plug 'ryanoasis/vim-devicons'
+Plug 'neovim/nvim-lspconfig'
+
+"required for gitsigns
+Plug 'nvim-lua/plenary.nvim'
+Plug 'lewis6991/gitsigns.nvim'
+
 
 call plug#end()
 
+lua << EOF
+ require('gitsigns').setup()
+EOF
 
 source ~/.vim/global.vim
 source ~/.vim/bindings.vim
 source ~/.vim/plugins.vim
+source ~/.vim/lsp.vim
