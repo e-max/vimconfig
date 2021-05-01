@@ -36,6 +36,17 @@ set infercase     " ignore case when searching
 set smartcase     " ignore case if search pattern is all lowercase, case-sensitive otherwise
 set smarttab      " insert tabs on the start of a line according to shiftwidth, not tabstop
 
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+set updatetime=250
+
+" Give more space for displaying messages.
+set cmdheight=2
+
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+"set signcolumn=yes
+
 
 "Search options
 set hlsearch      " highlight search terms

@@ -19,21 +19,10 @@ Plug 'preservim/nerdtree'
 Plug 'henrik/vim-indexed-search'
 Plug 'nanotech/jellybeans.vim', {'rtp': 'jellybeans'}
 Plug 'scrooloose/nerdcommenter'
-Plug 'majutsushi/tagbar'
 Plug 'gregsexton/gitv'
-Plug 'vim-syntastic/syntastic'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'bling/vim-airline'
-"Plug 'jremmen/vim-ripgrep'
-Plug 'fatih/vim-go'
-Plug 'plasticboy/vim-markdown'
 Plug 'roxma/vim-paste-easy'
-Plug 'christianrondeau/vim-base64'
-Plug 'junegunn/fzf', { 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'yuki-ycino/fzf-preview.vim', { 'branch': 'release/remote', 'do': ':UpdateRemotePlugins' }
-
-Plug 'airblade/vim-gitgutter'
 Plug 'cespare/vim-toml'
 Plug 'fidian/hexmode'
 Plug 'rust-lang/rust.vim'
@@ -43,7 +32,6 @@ Plug 'flazz/vim-colorschemes'
 " needed for gist
 Plug 'mattn/webapi-vim'
 Plug 'mattn/gist-vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'lambdalisue/suda.vim'
 Plug 'vimwiki/vimwiki'
 Plug 'liuchengxu/vista.vim'
@@ -71,11 +59,6 @@ Plug 'lyokha/vim-xkbswitch'
 Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
-
-autocmd BufRead,BufNewFile *.tpl set filetype=gotexttmpl
-autocmd BufReadPost,BufNewFile  *.fizz setlocal filetype=anko
-
-nmap <leader>u2d "mciw<C-R>=strftime("%c", @m)<CR><ESC>
 
 
 source ~/.vim/global.vim
