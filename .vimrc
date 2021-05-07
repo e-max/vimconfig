@@ -13,7 +13,7 @@ Plug 'tpope/vim-ragtag'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-eunuch'
 Plug 'vim-scripts/kwbdi.vim'
-"Plug 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'preservim/nerdtree'
 Plug 'henrik/vim-indexed-search'
@@ -58,16 +58,22 @@ Plug 'lyokha/vim-xkbswitch'
 Plug 'ryanoasis/vim-devicons'
 Plug 'neovim/nvim-lspconfig'
 
-"required for gitsigns
+"required for gitsigns and telescope
 Plug 'nvim-lua/plenary.nvim'
 Plug 'lewis6991/gitsigns.nvim'
+
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
+Plug 'hrsh7th/nvim-compe'
+
+Plug 'simrat39/rust-tools.nvim'
 
 
 call plug#end()
 
-lua << EOF
- require('gitsigns').setup()
-EOF
 
 source ~/.vim/global.vim
 source ~/.vim/bindings.vim
