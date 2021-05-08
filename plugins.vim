@@ -89,3 +89,13 @@ inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
 lua << EOF
 require('rust-tools').setup({})
 EOF
+
+lua << EOF
+require'nvim-web-devicons'.setup {
+ -- globally enable default icons (default to false)
+ -- will get overriden by `get_icons` option
+ default = true;
+}
+EOF
+
+source ~/.vim/telescope.vim

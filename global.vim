@@ -3,6 +3,9 @@
 set clipboard=unnamed
 set clipboard+=unnamedplus
 
+
+set termguicolors
+
 set encoding=utf-8
 
 set nocompatible          " We're running Vim, not Vi!

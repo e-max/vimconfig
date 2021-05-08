@@ -56,6 +56,8 @@ Plug 'lyokha/vim-xkbswitch'
 
 
 Plug 'ryanoasis/vim-devicons'
+Plug 'kyazdani42/nvim-web-devicons'
+
 Plug 'neovim/nvim-lspconfig'
 
 "required for gitsigns and telescope
