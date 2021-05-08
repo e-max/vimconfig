@@ -22,6 +22,13 @@ set mouse=a
 set autowriteall 
 set nobackup
 set noswapfile
+augroup autosave
+    autocmd!
+    autocmd BufRead * if &filetype == "" | setlocal ft=text | endif
+    autocmd FileType * autocmd TextChanged,InsertLeave <buffer> if &readonly == 0 && &buftype == "" | silent write | endif
+augroup END
+
+
 set history=1000         " remember more commands and search history
 set undolevels=1000      " use many muchos levels of undo
 set wildignore=*.swp,*.bak,*.pyc,*.class
