@@ -58,15 +58,18 @@ Plug 'lyokha/vim-xkbswitch'
 Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
 
+Plug 'folke/lsp-colors.nvim'
+
 Plug 'neovim/nvim-lspconfig'
 
 "required for gitsigns and telescope
 Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-lua/popup.nvim'
+
 Plug 'lewis6991/gitsigns.nvim'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
-Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
 Plug 'hrsh7th/nvim-compe'
