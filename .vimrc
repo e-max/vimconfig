@@ -76,6 +76,18 @@ Plug 'hrsh7th/nvim-compe'
 
 Plug 'simrat39/rust-tools.nvim'
 
+Plug 'fenetikm/falcon'
+Plug 'tomasiser/vim-code-dark'
+Plug 'marko-cerovac/material.nvim'
+Plug 'mhartington/oceanic-next'
+
+
+Plug 'onsails/lspkind-nvim'
+
+Plug 'folke/lsp-trouble.nvim'
+
+Plug 'rktjmp/lush.nvim'
+Plug 'metalelf0/jellybeans-nvim'
 
 call plug#end()
 

@@ -15,6 +15,28 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
 
 require'lspconfig'.rust_analyzer.setup {
   capabilities = capabilities,
+  settings = {
+        ["rust-analyzer"] = {
+            assist = {
+                importMergeBehavior = "last",
+                importPrefix = "by_self",
+            },
+            cargo = {
+                loadOutDirsFromCheck = true,
+				allFeatures = true,
+            },
+            procMacro = {
+                enable = true
+            },
+--          trace = {
+--           	server = "verbose",
+--			},
+			checkOnSave = {
+				extraArgs = { "--target-dir", "/home/e-max/tmp/rust-analyzer-check" }
+			},
+        },
+    },
+
 }
 
 
