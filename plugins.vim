@@ -146,3 +146,5 @@ require'nvim-web-devicons'.setup {
 EOF
 
 source ~/.vim/telescope.vim
+
+nmap <space>d :LspTroubleToggle<CR>
