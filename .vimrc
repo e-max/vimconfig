@@ -89,6 +89,8 @@ Plug 'folke/lsp-trouble.nvim'
 Plug 'rktjmp/lush.nvim'
 Plug 'metalelf0/jellybeans-nvim'
 
+Plug 'kyazdani42/nvim-tree.lua'
+
 call plug#end()
 
 
