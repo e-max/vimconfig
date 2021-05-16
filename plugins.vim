@@ -148,3 +148,9 @@ EOF
 source ~/.vim/telescope.vim
 
 nmap <space>d :LspTroubleToggle<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                              nvim-tree                              "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+nmap <space>t :NvimTreeToggle<CR>
