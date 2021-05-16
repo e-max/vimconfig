@@ -21,7 +21,7 @@ Plug 'nanotech/jellybeans.vim', {'rtp': 'jellybeans'}
 Plug 'scrooloose/nerdcommenter'
 Plug 'gregsexton/gitv'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-Plug 'bling/vim-airline'
+" Plug 'bling/vim-airline'
 Plug 'roxma/vim-paste-easy'
 Plug 'cespare/vim-toml'
 Plug 'fidian/hexmode'
@@ -90,6 +90,8 @@ Plug 'rktjmp/lush.nvim'
 Plug 'metalelf0/jellybeans-nvim'
 
 Plug 'kyazdani42/nvim-tree.lua'
+
+Plug 'famiu/feline.nvim'
 
 call plug#end()
 
