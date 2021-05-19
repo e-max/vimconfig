@@ -133,9 +133,6 @@ lua << EOF
 EOF
 
 
-lua << EOF
-require('rust-tools').setup({})
-EOF
 
 lua << EOF
 require'nvim-web-devicons'.setup {
