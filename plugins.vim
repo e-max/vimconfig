@@ -156,7 +156,7 @@ nmap <space>d :LspTroubleToggle<CR>
 
 
 lua << EOF
-require('feline').setup()
+require('statusline')
 EOF
 
 
