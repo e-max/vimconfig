@@ -1,6 +1,5 @@
 
 
-lua << EOF
 
 -- this is rust-tools settings 
 
@@ -124,7 +123,14 @@ local on_attach = function(client, bufnr)
 end
 
 
-local cwd = vim.fn['getcwd']();
+
+local path = vim.split(vim.fn['getcwd'](), '/');
+
+local last = path[#path];
+
+local rust_analyzer_folder = "/home/e-max/tmp/rust-analyzer-check/" .. last .. "/";
+
+
 
 
 local server = {
@@ -147,7 +153,7 @@ local server = {
 --           	server = "verbose",
 --			},
 			checkOnSave = {
-				extraArgs = { "--target-dir", "/home/e-max/tmp/rust-analyzer-check" }
+				extraArgs = { "--target-dir", rust_analyzer_folder }
 			},
         },
     },
@@ -165,9 +171,6 @@ require('rust-tools').setup(opts)
 
 
 
-
-
-EOF
 
 
 

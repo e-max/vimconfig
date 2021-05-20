@@ -95,8 +95,10 @@ Plug 'famiu/feline.nvim'
 
 call plug#end()
 
+lua << EOF
+require('mylsp')
+EOF
 
 source ~/.vim/global.vim
 source ~/.vim/bindings.vim
 source ~/.vim/plugins.vim
-source ~/.vim/lsp.vim
