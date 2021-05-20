@@ -124,6 +124,8 @@ local on_attach = function(client, bufnr)
 end
 
 
+local cwd = vim.fn['getcwd']();
+
 
 local server = {
   on_attach = on_attach,
