@@ -84,12 +84,3 @@ set wildmode=full
 autocmd FileType qf wincmd J
 
 colorscheme jellybeans
-
-
-
-
-
-
-
-
-
