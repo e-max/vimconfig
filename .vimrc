@@ -92,6 +92,7 @@ Plug 'metalelf0/jellybeans-nvim'
 Plug 'kyazdani42/nvim-tree.lua'
 
 Plug 'famiu/feline.nvim'
+Plug 'glepnir/lspsaga.nvim'
 
 call plug#end()
 
