@@ -13,7 +13,7 @@ let g:gist_clip_command = 'xclip -selection clipboard'
 
 
 
-"UltiSnips settings // don't use because switched to coc-snippets
+"UltiSnips settings 
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "/home/e-max/.vim/mysnippets/"]
  
 
@@ -117,6 +117,11 @@ require('lspkind').init({
 })
 
 EOF
+
+"highlight LspDiagnosticsDefaultError  gui=italic
+"highlight LspDiagnosticsDefaultWarning  gui=italic
+"highlight LspDiagnosticsDefaultInformation  gui=italic
+"highlight LspDiagnosticsDefaultHint  gui=italic
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
