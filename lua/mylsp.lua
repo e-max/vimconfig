@@ -1,7 +1,12 @@
 
 
+------------------------------------------------------------------------
+--                        rust-tools settings                         --
+------------------------------------------------------------------------
 
--- this is rust-tools settings 
+
+
+
 
 local tools = { -- rust-tools options
         -- automatically set inlay hints (type hints)
@@ -59,9 +64,16 @@ local tools = { -- rust-tools options
 }
 
 
+------------------------------------------------------------------------
+--                       rust-analyzer settings                       --
+------------------------------------------------------------------------
 
+-- needs here because we pass on attach from this module
+-- so we can get progress
+local lsp_status = require('lsp-status')
 
--- this is rust-analyzer settings
+lsp_status.register_progress()
+
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
@@ -73,8 +85,13 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
   }
 }
 
+capabilities = vim.tbl_extend('keep', capabilities, lsp_status.capabilities)
+
 
 local on_attach = function(client, bufnr)
+
+  lsp_status.on_attach(client)
+
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 

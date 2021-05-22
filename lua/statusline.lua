@@ -106,29 +106,48 @@ components.left.active[5] = {
     }
 }
 
+
+
+
+
 components.left.active[6] = {
-    provider = 'diagnostic_errors',
-    enabled = function() return lsp.diagnostics_exist('Error') end,
-    hl = { fg = 'red' }
+	provider = 'diagnostic_errors',
+	enabled = function() return lsp.diagnostics_exist('Error') end,
+	hl = { fg = 'red' }
 }
 
 components.left.active[7] = {
-    provider = 'diagnostic_warnings',
-    enabled = function() return lsp.diagnostics_exist('Warning') end,
-    hl = { fg = 'yellow' }
+	provider = 'diagnostic_warnings',
+	enabled = function() return lsp.diagnostics_exist('Warning') end,
+	hl = { fg = 'yellow' }
 }
 
 components.left.active[8] = {
-    provider = 'diagnostic_hints',
-    enabled = function() return lsp.diagnostics_exist('Hint') end,
-    hl = { fg = 'cyan' }
+	provider = 'diagnostic_hints',
+	enabled = function() return lsp.diagnostics_exist('Hint') end,
+	hl = { fg = 'cyan' }
 }
 
 components.left.active[9] = {
-    provider = 'diagnostic_info',
-    enabled = function() return lsp.diagnostics_exist('Information') end,
-    hl = { fg = 'skyblue' }
+	provider = 'diagnostic_info',
+	enabled = function() return lsp.diagnostics_exist('Information') end,
+	hl = { fg = 'skyblue' }
 }
+
+
+local lsp_status = require('lsp-status');
+
+
+components.left.active[10] = {
+	provider = function () 
+		return lsp_status.status_progress()
+	end,
+	enabled = true,
+	hl = { fg = 'grey' },
+    left_sep = ' '
+}
+
+
 
 components.right.active[1] = {
     provider = 'git_branch',

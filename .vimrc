@@ -94,6 +94,8 @@ Plug 'kyazdani42/nvim-tree.lua'
 Plug 'famiu/feline.nvim'
 Plug 'glepnir/lspsaga.nvim'
 
+Plug 'nvim-lua/lsp-status.nvim'
+
 call plug#end()
 
 lua << EOF
