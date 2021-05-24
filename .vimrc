@@ -17,7 +17,7 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'preservim/nerdtree'
 Plug 'henrik/vim-indexed-search'
-Plug 'nanotech/jellybeans.vim', {'rtp': 'jellybeans'}
+Plug 'nanotech/jellybeans.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'gregsexton/gitv'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
@@ -28,7 +28,7 @@ Plug 'fidian/hexmode'
 Plug 'rust-lang/rust.vim'
 Plug 'godlygeek/tabular'
 Plug 'will133/vim-dirdiff'
-Plug 'flazz/vim-colorschemes'
+"Plug 'flazz/vim-colorschemes'
 " needed for gist
 Plug 'mattn/webapi-vim'
 Plug 'mattn/gist-vim'
