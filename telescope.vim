@@ -20,7 +20,7 @@ require('telescope').setup{
 EOF
 
 
-nnoremap <leader>f <cmd>Telescope find_files<cr>
-nnoremap <leader>r <cmd>Telescope live_grep<cr>
+nnoremap <space>f <cmd>Telescope find_files<cr>
+nnoremap <space>r <cmd>Telescope live_grep<cr>
 nnoremap <space>b <cmd>Telescope buffers<cr>
-nnoremap <space>s <cmd>Telescope lsp_workspace_symbols<cr>
+nnoremap <space>s <cmd>Telescope lsp_dynamic_workspace_symbols<cr>
