@@ -64,6 +64,7 @@ components.left.active[2] = {
 
 components.left.active[3] = {
     provider = 'file_info',
+    type = 'relative-short',
     hl = {
         fg = 'white',
         bg = 'oceanblue',
