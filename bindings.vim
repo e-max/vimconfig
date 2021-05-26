@@ -50,7 +50,6 @@ cmap w!! w !sudo tee % >/dev/null
 " command! -range JSON <line1>,<line2>!python -m json.tool
 command! -range JSON <line1>,<line2>!jq ''
 
-nmap gc :RustOpenCargo<CR>
 nmap gp :RustParentModule<CR>
 
 

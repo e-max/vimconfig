@@ -18,7 +18,7 @@ Plug 'honza/vim-snippets'
 Plug 'preservim/nerdtree'
 Plug 'henrik/vim-indexed-search'
 Plug 'nanotech/jellybeans.vim'
-Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-commentary'
 Plug 'gregsexton/gitv'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 " Plug 'bling/vim-airline'
