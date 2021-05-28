@@ -77,10 +77,11 @@ Plug 'hrsh7th/nvim-compe'
 
 Plug 'simrat39/rust-tools.nvim'
 
-Plug 'fenetikm/falcon'
 Plug 'tomasiser/vim-code-dark'
 Plug 'marko-cerovac/material.nvim'
 Plug 'mhartington/oceanic-next'
+Plug 'savq/melange'
+Plug 'eddyekofo94/gruvbox-flat.nvim'
 
 
 Plug 'onsails/lspkind-nvim'
