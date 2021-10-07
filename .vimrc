@@ -101,6 +101,8 @@ Plug 'glepnir/lspsaga.nvim'
 Plug 'nvim-lua/lsp-status.nvim'
 Plug 'simrat39/symbols-outline.nvim'
 
+Plug 'ray-x/lsp_signature.nvim'
+
 call plug#end()
 
 lua << EOF
