@@ -68,7 +68,7 @@ set splitright    " vsplit будет открывать окно справа
 
 command -bar -nargs=1 OpenURL :!firefox <args>
 
-set completeopt=menuone,noselect
+set completeopt=menu,menuone,noselect
 set complete-=1
 
 set path=.,,**

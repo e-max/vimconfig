@@ -14,8 +14,6 @@ Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-cucumber'
 Plug 'vim-scripts/kwbdi.vim'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
 Plug 'preservim/nerdtree'
 Plug 'henrik/vim-indexed-search'
 Plug 'nanotech/jellybeans.vim'
@@ -75,6 +73,16 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 
 Plug 'nvim-telescope/telescope.nvim'
+
+
+" nvim-cmp
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/nvim-cmp'
+
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 
 
 Plug 'simrat39/rust-tools.nvim'

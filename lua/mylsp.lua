@@ -88,6 +88,10 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
 capabilities = vim.tbl_extend('keep', capabilities, lsp_status.capabilities)
 
 
+-- update from nvim-cmp
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+
+
 local on_attach = function(client, bufnr)
 
   lsp_status.on_attach(client)
