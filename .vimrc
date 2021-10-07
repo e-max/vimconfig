@@ -34,6 +34,7 @@ Plug 'will133/vim-dirdiff'
 " needed for gist
 Plug 'mattn/webapi-vim'
 Plug 'mattn/gist-vim'
+
 Plug 'lambdalisue/suda.vim'
 Plug 'vimwiki/vimwiki'
 Plug 'rhysd/vim-grammarous'
@@ -75,7 +76,6 @@ Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 
 Plug 'nvim-telescope/telescope.nvim'
 
-Plug 'hrsh7th/nvim-compe'
 
 Plug 'simrat39/rust-tools.nvim'
 
@@ -90,7 +90,7 @@ Plug 'onsails/lspkind-nvim'
 
 Plug 'folke/lsp-trouble.nvim'
 
-Plug 'rktjmp/lush.nvim'
+Plug 'rktjmp/lush.nvim' " required by jellybeans
 Plug 'metalelf0/jellybeans-nvim'
 
 Plug 'kyazdani42/nvim-tree.lua'
