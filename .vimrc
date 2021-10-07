@@ -101,7 +101,9 @@ Plug 'glepnir/lspsaga.nvim'
 Plug 'nvim-lua/lsp-status.nvim'
 Plug 'simrat39/symbols-outline.nvim'
 
+Plug 'ggandor/lightspeed.nvim'
 Plug 'ray-x/lsp_signature.nvim'
+Plug 'Pocco81/AutoSave.nvim'
 
 call plug#end()
 
