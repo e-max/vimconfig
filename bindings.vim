@@ -51,6 +51,7 @@ cmap w!! w !sudo tee % >/dev/null
 command! -range JSON <line1>,<line2>!jq ''
 
 nmap gp :RustParentModule<CR>
+nmap gP :RustOpenCargo<CR>
 
 
 " TagBar
