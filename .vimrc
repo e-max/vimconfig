@@ -115,10 +115,16 @@ Plug 'Pocco81/AutoSave.nvim'
 
 call plug#end()
 
-lua << EOF
-require('mylsp')
-EOF
+
 
 source ~/.vim/global.vim
+
+lua << EOF
+require('myfunctions')
+require('mylsp')
+require('statusline')
+EOF
+
+
 source ~/.vim/bindings.vim
 source ~/.vim/plugins.vim

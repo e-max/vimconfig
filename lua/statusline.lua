@@ -5,8 +5,11 @@ local lsp_status = require('lsp-status');
 
 
 -- modify file_info component
-components.active[1][3].opts = {
-	type = 'relative',
+components.active[1][3].provider = {
+	name = "file_info",
+	opts = {
+		type = 'unique'
+	}
 }
 
 components.active[1][10] = {
@@ -18,4 +21,5 @@ components.active[1][10] = {
     left_sep = ' '
 }
 
-require('feline').setup({components = components})
+-- require('feline').setup({components = components})
+require('feline').setup()
