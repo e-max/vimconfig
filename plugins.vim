@@ -179,3 +179,16 @@ lua <<EOF
   })
 
 EOF
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                  nvim-hop                                  "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+lua <<EOF
+
+require'hop'.setup()
+vim.api.nvim_set_keymap('n', '<space>/', "<cmd>lua require'hop'.hint_patterns()<cr>", {})
+vim.api.nvim_set_keymap('l', '<tab>', "<cr><cmd>lua require'hop'.hint_patterns({}, vim.fn['getreg']('/'))<cr>", {})
+
+EOF
+

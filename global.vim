@@ -61,6 +61,7 @@ set cmdheight=2
 "Search options
 set hlsearch      " highlight search terms
 set incsearch     " show search matches as you type
+set imsearch=1    " this allows to use lmap for map patterns in search strings
 set gdefault        " автоматически добавляет /g  к каждой строке замены (то есть замены происходят по всей строке)
 
 set splitright    " vsplit будет открывать окно справа

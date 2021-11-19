@@ -5,7 +5,6 @@ let g:rustfmt_autosave = 0
 call plug#begin('~/.vim/plugged')
 
 Plug 'jlanzarotta/bufexplorer'
-Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
@@ -108,7 +107,7 @@ Plug 'famiu/feline.nvim'
 Plug 'nvim-lua/lsp-status.nvim'
 Plug 'simrat39/symbols-outline.nvim'
 
-Plug 'ggandor/lightspeed.nvim'
+Plug 'phaazon/hop.nvim'
 Plug 'ray-x/lsp_signature.nvim'
 Plug 'Pocco81/AutoSave.nvim'
 
