@@ -77,6 +77,8 @@ Plug 'nvim-telescope/telescope.nvim'
 " nvim-cmp
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 
 Plug 'SirVer/ultisnips'
@@ -109,7 +111,8 @@ Plug 'simrat39/symbols-outline.nvim'
 
 Plug 'phaazon/hop.nvim'
 Plug 'ray-x/lsp_signature.nvim'
-Plug 'Pocco81/AutoSave.nvim'
+" Plug 'Pocco81/AutoSave.nvim'
+"
 
 call plug#end()
 
